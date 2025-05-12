@@ -25,7 +25,7 @@ namespace MyHompage.Controllers
         {
             return View();
         }
-        public IActionResult RefLinks()
+        public IActionResult Links()
         {
             return View();
         }

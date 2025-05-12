@@ -18,5 +18,52 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* leichtes Pastellgrau */
+    color: #333333; /* dunkles Grau für gute Lesbarkeit */
+    padding: 0 20px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+/* Tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+thead th {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+}
+
+tbody td {
+    text-align: left;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }

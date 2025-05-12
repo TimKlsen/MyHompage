@@ -13,12 +13,7 @@ namespace MyHompage.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
+        public IActionResult Home()
         {
             return View();
         }
@@ -26,6 +21,20 @@ namespace MyHompage.Controllers
         {
             return View();
         }
+        public IActionResult Project()
+        {
+            return View();
+        }
+        public IActionResult RefLinks()
+        {
+            return View();
+        }
+        public IActionResult Impressum()
+        {
+            return View();
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

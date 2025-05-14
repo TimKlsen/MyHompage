@@ -1,6 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Links";
+    ViewData["Title"] = "Kontakt";
 }
+@model KontaktViewModel
 <h1>@ViewData["Title"]</h1>
 
 <p>Sie können mich über meine Profile auf Xing, LinkedIn, GitHub und weiteren Plattformen erreichen, um mehr über meine beruflichen Erfahrungen und Projekte zu erfahren.</p>
@@ -19,9 +20,31 @@
 		
 		<img src="/Images/Mail Logo.jpg" alt="Mail" style="width: 40px; border-radius: 10px; margin-top: 10px; ">
 	</a>
-	
-	
-	
-	
 </div>
 
+<h2>Kontaktformular</h2>
+
+<form asp-action="Kontakt" method="post">
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Nachricht</label>
+        <textarea asp-for="Nachricht" class="form-control"></textarea>
+        <span asp-validation-for="Nachricht" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Absenden</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
